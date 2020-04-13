@@ -47,6 +47,10 @@ namespace PowerAppsGuy.CSSGISandData
                     list = csv.GetRecords<dailyReport>().ToList();
                     list.Sort();
 
+                    if(!String.IsNullOrEmpty(countryFilter)) {
+                        list = list.FindAll(x => x.Country_Region == countryFilter);
+                    }
+
                     var grouped = list.GroupBy(x => new { x.Country_Region, x.Province_State }).Select(g => new
                         {
                             Date = filename,
