@@ -14,7 +14,7 @@ using System.Net.Http.Headers;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PowerAppsGuy.CSSGISandData
+namespace PowerAppsGuy.CSSEGISandData
 {
     public static class CSSEGISandData
     {
